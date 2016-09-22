@@ -1,0 +1,9 @@
+{
+  "name": "mapreduce-sample",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "mongoose": "^4.6.1",
+    "uuid": "^2.0.3"
+  }
+}
