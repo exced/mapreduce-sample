@@ -7,13 +7,13 @@ var viewSchema = new Schema({
         required: true
     },
     user_id: {
-        type: Number,
+        type: String,
         required: true
-    }/*, // useless -> use _id.getTimestamp() instead
+    }, // useless -> use _id.getTimestamp() instead
     hour: {
-        type: Date,
-        default: Date.now
-    }*/
+        type: String,
+        default: true
+    }
 });
 
 module.exports = mongoose.model('View', viewSchema);
