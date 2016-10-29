@@ -14,7 +14,7 @@ mongoose.connection.on('open', function (err) {
 */
 var o = {};
 o.map = function () {
-    emit({ url: this.url, user_id: this.user_id, hour: this.hour }, 1)
+    emit({ url: this.url, hour: this.hour }, 1)
 };
 o.reduce = function (k, vals) {
     return vals.length

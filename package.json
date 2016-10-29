@@ -3,10 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "gen": "node methods/genDatas.js",
-    "remove": "node methods/removeDatas.js",
-    "pageviews": "node methods/pageviews.js"
+    "build": "node methods/removeDatas.js && node methods/genDatas.js",
+    "pageviews": "node methods/pageviews.js",
+    "uniques": "node methods/uniques.js"
   },    
   "devDependencies": {
     "mongoose": "^4.6.1",

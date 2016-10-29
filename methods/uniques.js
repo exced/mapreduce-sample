@@ -25,10 +25,6 @@ o.map = function () {
     emit({ url: this.url, hour: this.hour }, this.user_id);
 };
 o.reduce = function (k, vals) {
-    /* remove duplicates*/
-    function onlyUnique(value, index, self) { 
-        return self.indexOf(value) === index;
-    }
     var result = {};
     /* join uniques */
     for (val in vals.filter(onlyUnique)) {
@@ -36,6 +32,7 @@ o.reduce = function (k, vals) {
     }
     return result;
 };
+o.scope = { onlyUnique: new mongoose.mongo.Code(onlyUnique.toString()) }
 View.mapReduce(o, function (err, results) {
     if (err) throw err;
     console.log(results)

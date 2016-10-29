@@ -1,6 +1,28 @@
 # mapreduce-sample
 some mapReduce functions with MongoDB and NodeJS
 
+## Install
+```bash
+npm install
+```
+
+## Mapreduce queries
+To prepare the databse
+```bash
+npm run build 
+```
+### Pageviews(URL/hour)
+To see the views per URL per hour
+```bash
+npm run pageviews
+```
+
+### Uniques(URL/hour)
+To get the uniques per URL per hour
+```bash
+npm run uniques
+```
+
 ## datas
 To generate some datas for the mapReduce command 
 ```bash
@@ -9,17 +31,4 @@ node methods/genDatas.js
 To remove all datas
 ```bash
 node methods/removeDatas.js
-```
-
-## Mapreduce queries
-### Pageviews(URL/hour)
-To see the views per URL per hour
-```bash
-node methods/pageviews.js
-```
-
-### Uniques(URL/hour)
-To get the uniques per URL per hour
-```bash
-node methods/uniques.js
 ```
