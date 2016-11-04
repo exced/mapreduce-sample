@@ -25,17 +25,12 @@ o.map = function () {
     emit({ url: this.url, hour: this.hour }, this.user_id);
 };
 o.reduce = function (k, vals) {
-    var result = {};
-    /* join uniques */
-    for (val in vals.filter(onlyUnique)) {
-        result[val] = 1;
-    }
-    return result;
+    return {visitors: vals.filter(onlyUnique)};
 };
 o.scope = { onlyUnique: new mongoose.mongo.Code(onlyUnique.toString()) }
 View.mapReduce(o, function (err, results) {
     if (err) throw err;
-    console.log(results)
+    console.log(JSON.stringify(results));
 });
 
 mongoose.connection.close();
