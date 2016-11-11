@@ -2,8 +2,13 @@
 some mapReduce functions with MongoDB and NodeJS
 
 ## Install
+### with npm
 ```bash
 npm install
+```
+### with yarn
+```bash
+yarn install
 ```
 
 ## Mapreduce queries
